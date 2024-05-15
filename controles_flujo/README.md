@@ -38,3 +38,6 @@ for n in range(1,11)
          print (n)
 ```
 ### while
+# enumerate
+oraciones pequeñas se ejecutar mas lento
+de oraciones medianos y grandes se ejecuta mas rapido

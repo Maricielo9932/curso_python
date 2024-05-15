@@ -47,22 +47,10 @@ print(f"la cantidad de letras a que tengo es (contador)")
 #crear un programa que eme cuente la cantidad de comas y me muestre
 #sus indices.
 #ojo:tiene que pedir el uduario
-# Solicitar al usuario que escriba una oración
-oracion = input("Escribe una oración: ")
-
-# Inicializar una lista para almacenar los índices de las comas
-indices_comas = []
-
-# Inicializar una variable para controlar si estamos dentro de comillas
-dentro_comillas = False
-
-# Contar la cantidad de comas y almacenar sus índices
-for indice, caracter in enumerate(oracion):
-    if caracter == '"':
-        dentro_comillas = not dentro_comillas
-    if caracter == ',' and not dentro_comillas:
-        indices_comas.append(indice)
-
-# Mostrar la cantidad de comas y sus índices
-cantidad_comas = len(indices_comas)
-print("La oración tiene", cantidad_comas, "coma(s) y están en los índices:", indices_comas)
+oracion:str= input("Escribe una oración: ")
+contador:int=0
+for indice,letra in enumerate(oracion):
+    if letra == ",":
+        print(f"su indice es {indice}")
+        contador+=1
+print(f"la cantida de comas es{contador}")
