@@ -38,6 +38,20 @@ for n in range(1,11)
          print (n)
 ```
 ### while
+es un mecanismo que usa`python` para repetir intruciones, la 
+semantica de esta sentencia es:`mientras se cumpla la condicion has 
+algo`
+```python
+while():
+    print("hola")
+    #bucle infinito
+```
 # enumerate
 oraciones pequeñas se ejecutar mas lento
 de oraciones medianos y grandes se ejecuta mas rapido
+# FOR 
+se utiliza para recorer lista 
+# upper()
+convierte el texto en mayuscula
+# lower 
+convierte el texto a miniscula
