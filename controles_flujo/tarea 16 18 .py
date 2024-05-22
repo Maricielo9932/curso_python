@@ -120,5 +120,5 @@ while True:
 #Escriba un programa que solicite una contraseña (el texto de la contraseña no es importante) y la vuelva a solicitar hasta que las dos contraseñas coincidan.
 # Función para solicitar y validar la contraseña
 def validar_contrasena():
-    while True:
-        contrasena1 = input("Ingrese la con)                 
+    while True:contrasena1 = 
+input("Ingrese la con)                 
