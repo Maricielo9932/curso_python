@@ -41,3 +41,18 @@ index({
 "edad":25 
 }) 
 print(lista_alumnos[indice])
+# un empresario de alquiler de autos desea guardar en una base de datos 
+# la informacion de sus vehiculos, proceso que desea automatizar con un 
+# sistema infromatico, las acciones que puede realizar el empresario son 
+# ver las lista de autos que tiene, podra tambien actualizar la lista y 
+# agregar un nuevo vehiculo
+
+# caso de uso de programacion
+
+# yo como empresario
+# puedo ver las lista de autos que tengo
+# puedo actualizar la lista
+# puedo agregar                                                                gar un  nuevo veiculo    
+# para guardar informacion de los vehiculos 
+
+# programacion
