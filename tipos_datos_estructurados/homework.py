@@ -56,3 +56,37 @@ print(lista_alumnos[indice])
 # para guardar informacion de los vehiculos 
 
 # programacion
+# Lista de autos
+autos = [
+    {"marca": "Toyota", "modelo": "Corolla", "año": 2020, "precio": 30000},
+    {"marca": "Honda", "modelo": "Civic", "año": 2019, "precio": 28000},
+    {"marca": "Ford", "modelo": "Mustang", "año": 2021, "precio": 45000}
+]
+def ver_lista_autos(lista_autos):
+    print("Lista de Autos:")
+    for idx, auto in enumerate(lista_autos, 1):
+        print(f"Auto {idx}: Marca: {auto['marca']}, Modelo: {auto['modelo']}, Año: {auto['año']}, Precio: ${auto['precio']}")
+
+def actualizar_auto_manual(lista_autos, indice):
+    if indice >= 1 and indice <= len(lista_autos):
+        print(f"Ingrese la nueva información para el Auto {indice}:")
+        marca = input("Marca: ")
+        modelo = input("Modelo: ")
+        año = int(input("Año: "))
+        precio = float(input("Precio: "))
+        lista_autos[indice - 1] = {"marca": marca, "modelo": modelo, "año": año, "precio": precio}
+        print("Información del auto actualizada correctamente.")
+    else:
+        print("Índice de auto no válido.")
+def agregar_auto(lista_autos, nuevo_auto):
+    lista_autos.append(nuevo_auto)
+    print("Nuevo auto agregado correctamente.")
+ver_lista_autos(autos)
+actualizar_auto_manual(autos, 2)
+nuevo_auto = {"marca": "Chevrolet", "modelo": "Camaro", "año": 2022, "precio": 50000}
+agregar_auto(autos, nuevo_auto)
+ver_lista_autos(autos)
+# crear una lista de los primeros 20 numeros primos haciendo uso de comprension
+numeros_primos={num:"primo" for num in range(2, 100) if es_primo(num)} 
+primeros_20_numeros-dict(list(numeros_primos.items())[:20])
+print(primeros_20_numeros)
