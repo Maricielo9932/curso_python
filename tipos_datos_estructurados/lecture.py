@@ -51,4 +51,22 @@ copia_lista.sort()
 #otra_variable=lista.sort()
 print(lista)
 print(copia_lista)
-
+# crear una lista de numeros enteros del siguiente texto texto="1,4,8,9,6" 
+nueva_lista=[] 
+for n in texto.split(","): nueva_lista.append(int(n)) 
+print(nueva_lista)
+# aplicando la tecnica vlc valor blucle y condicion 
+texto="1,4,8,9,6"  
+nueva_lista=[int(n) 
+for n in texto.split(",") if int(n) %2==0] 
+print(nueva_lista)
+#diccionarios por comprension 
+lista_amigos["abel", "anthony","edith", "ruth"]
+diccionario={}
+for _,v in enumerate(lista_amigos):
+    diccionario[v]=len(v)
+print(dicionario)
+#aplicar el vlc
+lista_amigos["abel", "anthony","edith", "ruth"]
+diccionario={amigo:len(amigo)for amigo in lista_amigos}
+print(dicionario)

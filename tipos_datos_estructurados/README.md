@@ -127,4 +127,17 @@ alummnos[0]=("nombre":"mafer","edad":15)
 alummnos[1]["sexo"]=" por defenir"
 print(alumnos)
 ```
-
+### 8. Listas y diccionarios
+ por comprencion diccionarios en una sola linea conbinandio bucles y deciciones.
+ > [NOTE] 130 131 
+ > *vic* value loop condicion- valor bucle condicion
+ ```python
+#Lista por comprension 
+texto="1,4,8,9,6" 
+nueva_lista=[int(n) for n in texto.split(",") if int(n)%2==0] 
+print(nueva_lista) 
+#diccionarios por comprension 
+lista_amigos=["abel", "anthony", "edith","ruth"] 
+diccionario=(amigo:len(amigo) for amigo in lista_amigos} 
+print(diccionario)
+```
