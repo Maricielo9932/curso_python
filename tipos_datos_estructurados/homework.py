@@ -87,6 +87,6 @@ nuevo_auto = {"marca": "Chevrolet", "modelo": "Camaro", "año": 2022, "precio": 
 agregar_auto(autos, nuevo_auto)
 ver_lista_autos(autos)
 # crear una lista de los primeros 20 numeros primos haciendo uso de comprension
-numeros_primos={num:"primo" for num in range(2, 100) if es_primo(num)} 
-primeros_20_numeros-dict(list(numeros_primos.items())[:20])
-print(primeros_20_numeros)
+numeros= {num: True for num in range(2, 73) if all(num % i != 0 for i in range(2, int(num**0.5)+1))}
+numeros_primos= list(numeros.keys())[:20]
+print(numeros_primos)
