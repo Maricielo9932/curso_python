@@ -1,4 +1,5 @@
-#crear una tisto de 5 alumnas atanacenaresos su nombre opettido y edad 
+#tarea 1
+# crear una tisto de 5 alumnas atanacenaresos su nombre opettido y edad 
 lista_alumnos[{ 
     "nombre":"abel",
     "apellido": "rojas", 
@@ -41,6 +42,25 @@ index({
 "edad":25 
 }) 
 print(lista_alumnos[indice])
+# tarea 2
+# Crear una lista con 3 diccionarios de mascotas
+mascotas = [
+    {"nombre": "Luna", "edad": 3, "sexo": "Hembra", "raza": "Labrador"},
+    {"nombre": "Max", "edad": 5, "sexo": "Macho", "raza": "Golden Retriever"},
+    {"nombre": "Bella", "edad": 2, "sexo": "Hembra", "raza": "Bulldog"}
+]
+
+# Mostrar la lista original
+print("Lista Original:")
+print(mascotas)
+
+# Editar el tercer registro cambiando la edad
+mascotas[2]["edad"] = 4
+
+# Mostrar la lista con el tercer registro modificado
+print("\nLista con el Tercer Registro Modificado:")
+print(mascotas)
+# tarea 3
 # un empresario de alquiler de autos desea guardar en una base de datos 
 # la informacion de sus vehiculos, proceso que desea automatizar con un 
 # sistema infromatico, las acciones que puede realizar el empresario son 
@@ -86,6 +106,8 @@ actualizar_auto_manual(autos, 2)
 nuevo_auto = {"marca": "Chevrolet", "modelo": "Camaro", "año": 2022, "precio": 50000}
 agregar_auto(autos, nuevo_auto)
 ver_lista_autos(autos)
+
+# tarea 4 
 # crear una lista de los primeros 20 numeros primos haciendo uso de comprension
 numeros= {num: True for num in range(2, 73) if all(num % i != 0 for i in range(2, int(num**0.5)+1))}
 numeros_primos= list(numeros.keys())[:20]
