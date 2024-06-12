@@ -41,8 +41,7 @@ def uno():
     return 1
 uno()
 ```
->[!WARNING]
->no confudir `print`com `return`, el valor retornado por `return` nos permite usuario fuera de su contexto. y `print()`
+>[!WARNING]o confudir `print`com `return`, el valor retornado por `return` nos permite usuario fuera de su contexto. y `print()`
 solo mostrara el literal poe terminal.
 **ejemplo**
 *en el archivo `lecture.py`
@@ -59,4 +58,113 @@ def lista():
 def dicc():
     return("nombre","jose","edad":45)
 dicc()
-#retona ("nombre","jose","edad":45)
+#retona ("nombre","jose","edad":45) 2
+```
+## parametros y argumentos
+si una funcio no dispusiera de valores de entrada estaria limitada en su actuacion.
+es por ello que los `parametro` no permiten variar los datos que comsume para obtener 
+distintos resultado
+**ejemplo**
+*crear una funcion que recibee un valornumerico y devuelve su raiz cuadrada*
+```python
+def sqrt(valor):
+    return valor**(1/2)
+# NOTA:en este caso, el valor 4 es un argumento de la funcion 
+sqrt(4)
+```
+cundo llama,os una funcion con los `argumentos`, los valores de estos argumentos se 
+copian en los correspondientes `parametros` dentro de la funcion.
+```python
+def ejem(a,b,c):
+    return a+b+c
+ejem(4,5,6)
+```
+### argumentos nominales
+en esta aproximacion los argumentos no son copiados  en un orden especifico sino que 
+**se asignanpor nombre a cada parametro**. ello nos permite evitar el problema de conocer
+o recordar cual es el orden de los parametros de la funcion. 
+para utilizarlo basta con realizar una asignacion de cada argumento en la propia llamada a la funcion.
+**ejemplo**
+```python
+def build_cpu(familia,num_core,frecuencia):
+    print(f"""
+    la cpu es de la familia {familia}, 
+    con {num_core}, cores y con una 
+    frecuencia {frecuencia} """)
+    build_cpu(num_core=4,familia="intel",frecuencia=2.7)
+```
+### argumentos posicionales
+los argumentos son copiados en un orden especifico, en este caso debemos conocer o recordar cual es el orden de los parametros.
+**ejemplo**
+```python
+def build_cpu(familia,num_core,frecuencia):
+    print(f"""
+    la cpu es de la familia {familia},
+    con {num_core}, cores y con una 
+    frecuencia de (frecuencia) 
+    """)
+#haciendo uso de agumentos posicionales
+build_cpu("intel",4,2,7)
+```
+### parametros por defecto
+es posible especificar *valores por defecto* en los parametros de una funcion, en el caso de que no se proporcione un valor al argumento en la llamada a la funcion, el parametro correspondiente tomara el valor definido por defecto
+**ejemplo**
+```python
+def alumnos(nom,app,estado="aprobado"):
+
+alumnos("ruth","castillo")
+alumnos("anthony","cruces","desaprobados")
+```
+### desempaquetado/empaquetado de argumentos(tarea)
+son argumentos cuando estamos invocando a una función, tanto para argumentos posicionales como para argumentos nominales.
+Y de esto se deriva el hecho de que podamos utilizar un número variable de argumentos en una función, algo que puede ser muy interesante según el caso de uso que tengamos.
+- Empaquetar/Desempaquetar argumentos posicionales
+- empaquetado posicionales
+```python
+def calcular_promedio(numeros):
+    total = sum(numeros)
+    promedio = total / len(numeros)
+    return promedio
+print(calcular_promedio(5, 10, 15))  
+print(calcular_promedio(2, 4, 6, 8, 10))  
+```
+- desenpaquetado posicionales 
+```python
+def saludar(nombre, edad):
+    print(f"Hola {nombre}, tienes {edad} años.")
+datos = ["María", 30]
+saludar(datos) 
+info = {"nombre": "Juan", "edad": 25}
+saludar(info) 
+```
+- Empaquetar/Desempaquetar argumentos nominales
+- Empaquetar nominales
+```python
+def imprimir_info(**datos):
+    for clave, valor in datos.items():
+        print(f"{clave}: {valor}")
+info = {"nombre": "María", "edad": 30, "ciudad": "Lima"}
+imprimir_info(**info) 
+```
+- Desempaquetar nominales
+```python
+def saludar(**info):
+    if "nombre" in info and "edad" in info:
+        print(f"Hola {info['nombre']}, tienes {info['edad']} años.")
+datos = {"nombre": "Juan", "edad": 25}
+saludar(**datos) 
+```
+### funciones internas de python(tarea)
+también conocidas como funciones anidadas son funciones definidas dentro de otra función. Estas funciones internas pueden acceder a las variables locales de la función externa en la que están definidas. 
+```python
+ Copiar
+def funcion_externa():
+    mensaje = "Hola, soy una función externa."
+
+    def funcion_interna():
+        print("Soy una función interna.")
+    
+    funcion_interna() 
+    print(mensaje)  
+funcion_externa()
+```
