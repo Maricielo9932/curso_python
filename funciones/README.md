@@ -120,6 +120,7 @@ son argumentos cuando estamos invocando a una función, tanto para argumentos po
 Y de esto se deriva el hecho de que podamos utilizar un número variable de argumentos en una función, algo que puede ser muy interesante según el caso de uso que tengamos.
 - Empaquetar/Desempaquetar argumentos posicionales
 - empaquetado posicionales
+**ejemplo**
 ```python
 def calcular_promedio(numeros):
     total = sum(numeros)
@@ -139,6 +140,7 @@ saludar(info)
 ```
 - Empaquetar/Desempaquetar argumentos nominales
 - Empaquetar nominales
+**ejemplo**
 ```python
 def imprimir_info(**datos):
     for clave, valor in datos.items():
@@ -168,3 +170,69 @@ def funcion_externa():
     print(mensaje)  
 funcion_externa()
 ```
+## tipos de funciones 
+-Funciones integradas (Built-in Functions): 
+Son funciones predefinidas en Python que están disponibles para su uso sin necesidad de importar ningún módulo adicional. Ejemplos de funciones integradas son  print() ,  len() ,  max() ,  min() 
+```python
+# Función integrada para obtener la longitud de una lista
+lista = [1, 2, 3, 4, 5]
+longitud = len(lista)
+print("Longitud de la lista:", longitud)
+```
+-Funciones definidas por el usuario (User-defined Functions): 
+Son funciones creadas por el usuario para realizar tareas específicas. Estas funciones se definen utilizando la palabra clave  def .
+```python
+def suma(a, b):
+    return a + b
+
+resultado = suma(5, 3)
+print("Resultado de la suma:", resultado)
+```
+## funciones anonimas (funciones lambda)
+-Funciones lambda (Lambda Functions): 
+Son funciones anónimas que pueden tener cualquier número de argumentos pero solo pueden tener una expresión. Se definen utilizando la palabra clave  lambda .
+```python
+# Función lambda para calcular el cuadrado de un número
+cuadrado = lambda x: x**2
+resultado = cuadrado(5)
+print("Cuadrado de 5:", resultado)
+ ``` 
+### funciones closure
+Una función de cierre (closure) en Python es una función que recuerda el ámbito en el que fue creada, incluso cuando la función se está ejecutando fuera de ese ámbito. Esto significa que la función de cierre puede acceder y recordar las variables locales de la función externa en la que fue definida.
+```python
+def multiplicador(n):
+    def funcion_interna(x):
+        return x * n
+    return funcion_interna
+
+# Crear funciones de cierre con diferentes valores
+multiplicar_por_2 = multiplicador(2)
+multiplicar_por_5 = multiplicador(5)
+
+# Utilizar las funciones de cierre
+resultado1 = multiplicar_por_2(10)
+resultado2 = multiplicar_por_5(10)
+
+print("Resultado de multiplicar 10 por 2:", resultado1)
+print("Resultado de multiplicar 10 por 5:", resultado2)
+```
+### funciones callback
+En Python, las funciones de devolución de llamada (callback functions) son funciones que se pasan como argumentos a otras funciones para que se ejecuten en un momento específico o en respuesta a ciertas acciones. Las funciones de devolución de llamada son comunes en programación asíncrona, manejo de eventos y programación orientada a objetos.
+```python
+def operacion_matematica(a, b, callback):
+    resultado = a + b
+    callback(resultado)
+
+def mi_callback(resultado):
+    print("El resultado de la operación es:", resultado)
+
+# Llamada a la función con una función de devolución de llamada
+operacion_matematica(5, 3, mi_callback)
+```
+### programacion 
+La programación en Python es el proceso de escribir instrucciones en el lenguaje de programación Python para crear programas que realicen tareas específicas. Python es un lenguaje de programación popular y versátil que se utiliza en una amplia gama de aplicaciones, como desarrollo web, análisis de datos, inteligencia artificial, automatización, entre otros.
+```python
+print("¡Hola, mundo!")
+ ```
+En este ejemplo,  print()  es una función integrada en Python que imprime el texto "¡Hola, mundo!" en la consola cuando se ejecuta el programa.
+La programación en Python implica escribir código en un editor de texto o un entorno de desarrollo integrado (IDE), guardar el archivo con la extensión  .py  y luego ejecutar el programa para ver el resultado. Los programas en Python pueden incluir funciones, condicionales, bucles, manejo de excepciones y mucho más para crear aplicaciones complejas.

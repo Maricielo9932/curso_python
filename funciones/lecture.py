@@ -48,3 +48,8 @@ def persona(nom,edad):
         edad=edad
     )
 print(persona(nombre,edad))
+#empaqueta y desempaqueta de argumento nominales 
+def alumnos(**kwargs): 
+    kwargs["nombre"]="abel"
+    print(kwargs) 
+alumnos (nombre= "miguel", apellido="largo", edad=30)
