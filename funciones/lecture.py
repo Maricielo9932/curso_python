@@ -53,3 +53,30 @@ def alumnos(**kwargs):
     kwargs["nombre"]="abel"
     print(kwargs) 
 alumnos (nombre= "miguel", apellido="largo", edad=30)
+# funciones anonimas (funciones lambda)
+lambda:"hola"
+print(lambda:"hola")
+saludo=lambda:"hola"
+print(saludo())
+saludo=lambda n,a:"hola",{n} , {a}
+print(saludo("ruth","castillo"))
+# crear un programa anonimo que reciba como parametro
+# una lista de 5 numeros y retorne dos litas una com los
+# numeros pares y otra con numeros inpares
+litas_numeros=[4,7,5,3,47,2,10,8,10]
+pares=lambda l:[n for n in lita if  n%2==0]
+impares=lambda l:[n for n in lita if  n%2!==0]
+print(pares(lista))
+print(inpares(lista))
+# tarea hacer el programa de ariba en tres lineas
+obtener_pares_impares = lambda numeros: [list(filter(lambda x: x % 2 == 0, numeros)), list(filter(lambda x: x % 2 != 0, numeros))]
+lista_pares, lista_impares = obtener_pares_impares([1, 2, 3, 4, 5])
+print("Lista de números pares:", lista_pares)
+print("Lista de números impares:", lista_impares)
+# funciones callback
+def mensaje(m): 
+    print(m)
+def pedir_nombre(): 
+    nombre=input("ingresa tu nombre") 
+    return nombre 
+mensaje(pedir_nombre())

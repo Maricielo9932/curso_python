@@ -233,6 +233,56 @@ operacion_matematica(5, 3, mi_callback)
 La programación en Python es el proceso de escribir instrucciones en el lenguaje de programación Python para crear programas que realicen tareas específicas. Python es un lenguaje de programación popular y versátil que se utiliza en una amplia gama de aplicaciones, como desarrollo web, análisis de datos, inteligencia artificial, automatización, entre otros.
 ```python
 print("¡Hola, mundo!")
+# programacion interativa
+lista =[5,7,8,4,1]
+def num minimo(1): 
+    minimo=l[0] 
+    for n in l: 
+        if < n minimo: 
+            minimo-n  
+    return minimo
+#programcion funcional
+min(lista)
  ```
 En este ejemplo,  print()  es una función integrada en Python que imprime el texto "¡Hola, mundo!" en la consola cuando se ejecuta el programa.
 La programación en Python implica escribir código en un editor de texto o un entorno de desarrollo integrado (IDE), guardar el archivo con la extensión  .py  y luego ejecutar el programa para ver el resultado. Los programas en Python pueden incluir funciones, condicionales, bucles, manejo de excepciones y mucho más para crear aplicaciones complejas.
+
+#### averiguar sobre map(), filter(), reduce()
+### 1.  map : La función  map  aplica una función a cada elemento de una lista y devuelve un nuevo iterable con los resultados.
+ 
+Ejemplo de  map :
+ 
+python
+ Copiar
+# Doble de cada número en una lista
+numeros = [1, 2, 3, 4, 5]
+resultado = list(map(lambda x: x * 2, numeros))
+print(resultado)  # Output: [2, 4, 6, 8, 10]
+ 
+ 
+### 2.  filter : La función  filter  filtra los elementos de una lista según una condición especificada en una función.
+ 
+Ejemplo de  filter :
+ 
+python
+ Copiar
+# Filtrar los números pares de una lista
+numeros = [1, 2, 3, 4, 5]
+resultado = list(filter(lambda x: x % 2 == 0, numeros))
+print(resultado)  # Output: [2, 4]
+ 
+ 
+### 3.  reduce : La función  reduce  aplica una función de manera acumulativa a los elementos de una lista, reduciéndola a un solo valor.
+ 
+Antes de Python 3,  reduce  estaba disponible directamente, pero ahora se encuentra en el módulo  functools .
+ 
+Ejemplo de  reduce :
+ 
+python
+ Copiar
+from functools import reduce
+
+# Suma de todos los elementos de una lista
+numeros = [1, 2, 3, 4, 5]
+resultado = reduce(lambda x, y: x + y, numeros)
+print(resultado)  # Output: 15
