@@ -252,37 +252,32 @@ La programación en Python implica escribir código en un editor de texto o un e
  
 Ejemplo de  map :
  
-python
- Copiar
+```python
 # Doble de cada número en una lista
 numeros = [1, 2, 3, 4, 5]
 resultado = list(map(lambda x: x * 2, numeros))
 print(resultado)  # Output: [2, 4, 6, 8, 10]
- 
- 
+```
 ### 2.  filter : La función  filter  filtra los elementos de una lista según una condición especificada en una función.
  
 Ejemplo de  filter :
  
-python
- Copiar
+```python
 # Filtrar los números pares de una lista
 numeros = [1, 2, 3, 4, 5]
 resultado = list(filter(lambda x: x % 2 == 0, numeros))
 print(resultado)  # Output: [2, 4]
- 
- 
+```
 ### 3.  reduce : La función  reduce  aplica una función de manera acumulativa a los elementos de una lista, reduciéndola a un solo valor.
  
 Antes de Python 3,  reduce  estaba disponible directamente, pero ahora se encuentra en el módulo  functools .
  
 Ejemplo de  reduce :
- 
-python
- Copiar
-from functools import reduce
+```python
+ rom functools import reduce
 
 # Suma de todos los elementos de una lista
 numeros = [1, 2, 3, 4, 5]
 resultado = reduce(lambda x, y: x + y, numeros)
 print(resultado)  # Output: 15
+```

@@ -80,3 +80,62 @@ def pedir_nombre():
     nombre=input("ingresa tu nombre") 
     return nombre 
 mensaje(pedir_nombre())
+# map
+lista=[4,7,8,5,2]
+map(lambda x:x+1,lista) # por defecto retorna una lista
+
+
+# tengo una lista de alumnos que todos ellos aprobaron y pasan al tecer semestre.
+# tengo una lista toos estan con el segundo semestre por lo que tendremos qye crear una solucion que cambie el campi
+# crear un programa que cambie el campo de semestre de 2 a 3
+lista_alumnos=[ 
+    {
+        "nombre":"abel"
+        "edad":36,
+        "semestre":2
+    },
+    {
+        "nombre":"anthony",
+        "edad":40
+        "semestre":2
+    },
+    {
+        "nombre":"edith",
+        "edad":50,
+        "semestre":2
+    }
+    de
+]
+def objeto(e):
+    if"semestre" in e:
+        e[semestre"]=e["semestre"]+1
+    return [ 
+        e 
+    ]
+alimnos_actualizados=list(map(,lista_alumnos))
+print(alumnos_actualizado)[1]
+
+# filter
+# devlover los numeros pares de una lista
+lista=[4,8,2,5,7,10,6,5,3,20]
+nueva_lista=list(filter(lambda x:x%2==0,lista))
+print(nueva_lista)
+{
+        "nombre":"abel"
+        "edad":36,
+        "semestre":2
+    },
+    {
+        "nombre":"anthony",
+        "edad":40
+        "semestre":2
+    },
+    {
+        "nombre":"edith",
+        "edad":50,
+        "semestre":2
+    }
+]
+
+lista_filtrada=list(filter(lambda x:x["edad"]<50,lista_alumnos))
+print(lista_filtrar)
