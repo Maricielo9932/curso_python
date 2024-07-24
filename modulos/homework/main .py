@@ -1,4 +1,4 @@
-"""este es el script principal""" 
+"""este es el script principal"""
 from mayor_edad import funcion_mayor_edad 
 import es_mayor 
 import es_menor 
