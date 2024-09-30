@@ -23,4 +23,17 @@ pra crear un `objeto` primeros debemos definir la `clase` para reponder la pregu
 en el proceso de diseño de una clase hay que terner en cuenta en `pricipio de responsabilidad unica`, esto intentando que los atributos y que los `metodos` esten enfocados en un objetivo unico y bien definido.
 ![alt text](https://media.discordapp.net/attachments/1229804394959208529/1265686049707786340/image.png?ex=66a2697d&is=66a117fd&hm=85d033dcdc400108ba27a1e68cd63a6dfb1513b34a5e65ae3231127627ec34c5&=&format=webp&quality=lossless)
 >[!TIP]
-> *Un paradigma de programacion es un metodo, tecnica o estilo de programar. Muchos de los lenguajes de programacion son creados en base a un paradigma, ejemplo java es un lenguaje que adopta el paradigma POO(Programacion Orienda a Objetos). Sin embargo existen lenguajes de programacion que adoptan varios paradigmas como es el caso de python y javascript estos son lenguajes multiparadigmas.
+> *Un paradigma de programacion es un metodo, tecnica o estilo de programar. Muchos de los lenguajes de programacion son creados en base a un paradigma, ejemplo java es un lenguaje que adopta el paradigma POO(Programacion Orienda a Objetos). Sin embargo existen lenguajes de programacion que adoptan varios paradigmas como es el caso de python y javascript estos son lenguajes multiparadigma
+> las clase son representados por cuadritos
+#### UML unifique modeling language
+es una herramienta que ayuda a capturar mediante un conjunto de símbolos y diagramas a comunicar la idea de un sistema (software orientado a objetos), a quien esté involucrado en su proceso de desarrollo sirviendo de apoyo en los procesos de análisis y diseño de un problema. tiene 3 partes  
+-  primera parate nombre de la clase o nombre del objetos
+- segunda parte atributos son iguales a variables o caracteristicas
+-  tercera patre metodos o funciones o acciones que se pueden realizar
+> reglas
+>
+- singular pascal case nombre del odjeto
+- los objetos pueden ser cosas visibles o cosas logicas
+- sustantivo snake_case :para art publico(+) para atr privados(-)
+- verbos snake_case :y se identifica con un (.)
+  ![alt text](image.png)
