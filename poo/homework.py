@@ -40,5 +40,17 @@ class agencia:
     def ver_estado_pasaje(self):
         print("estoy viendo el estado de mi pasaje")
 mario=agencia("mario","ramos lopez",7446489,122,"2025-1-22")
-print(mario.ingresar_destino())
-mario.ingresar_origen("puquio")
+print(mario.ingresar_origen("puquio"))
+malu=agencia("malu","ramos lopez",7446489,122,"2025-1-22")
+print(malu.ingresar_destino())
+maria=agencia("maria","ramos lopez",7446489,122,"2025-1-22")
+print(maria.ingresar_destino())
+juan=agencia("juan","ramos lopez",7446489,122,"2025-1-22")
+print(juan.cancelar_viaje())
+ana=agencia("ana","ramos lopez",7446489,122,"2025-1-22")
+print(ana.ver_estado_pasaje())
+
+
+
+
+
